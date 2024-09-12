@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+
+
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: darkgrey;
+
+
+
+        }
+
+        .header {
+
+
+            display: flex;
+            justify-content: space-between;
+            margin: 5px auto;
+            padding-left: 20%;
+            padding-right: 20%;
+            padding-top: 35px;
+            font-size: 25px;
+            text-decoration: none;
+
+            background-color: darkgray;
+            position: sticky;
+            top: 0;
+            background-color: rgb(31, 25, 25);
+            margin: auto 0px;
+
+
+        }
+
+        .logo {
+
+            display: flex;
+
+        }
+
+        .logotxt {
+            color: black;
+            font-size: 30px;
+            font-weight: bold;
+
+        }
+
+        .logoimg {
+
+
+
+            height: 100%;
+            width: 35px;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+            font-size: 15px;
+        }
+
+
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+        }
+
+        .button1 {
+            border: 1px solid blue;
+            background-color: blue;
+            color: white;
+            border-radius: 7px;
+            font-size: 20px;
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+        }
+
+        .section {
+            background-color: darkgray;
+
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            height: 40%;
+            /* background-color: brown; */
+            width: 65%;
+            margin: 40px auto;
+            padding: 25px 25px 25px 25px;
+        }
+
+        .p {
+
+            font-size: 20px;
+            padding-bottom: 20px;
+
+        }
+
+        .p a {
+
+            color: blue;
+        }
+
+        .div1 {
+
+            padding: 25px 25px;
+
+
+        }
+
+        .heading {
+
+            font-size: 45px;
+            padding-bottom: 20px;
+
+        }
+
+        .para {
+
+            padding-right: 20px;
+        }
+
+        .button {
+            margin-top: 20px;
+            height: 25px;
+            width: 55%;
+            display: flex;
+            gap: 20px;
+
+        }
+
+        .button2 {
+
+            background-color: rgb(52, 52, 160);
+            color: white;
+            height: 30px;
+            width: 130px;
+            font-size: 15px;
+            border-radius: 3px;
+        }
+
+        .button3 {
+            background-color: grey;
+            color: white;
+            height: 30px;
+            width: 120px;
+            font-size: 15px;
+            border-radius: 3px;
+        }
+
+        .card2 {
+
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 35px;
+            /* height: 40%; */
+            /* background-color: brown; */
+            width: 65%;
+            margin: 5px auto;
+            padding: 25px 25px 25px 25px;
+        }
+
+        .container {
+
+            /* display: flex;
+    flex-direction: column;
+    gap: 5px; */
+            background-color: darkgrey;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+
+        }
+
+        .h2 {
+
+
+            font-size: 35px;
+            font-weight: bolder;
+        }
+
+        .para2 {
+            color: rgba(61, 52, 52, 0.658);
+        }
+
+        .grid {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 15px;
+
+        }
+
+        .item {
+
+            display: flex;
+            background-color: white;
+            border-radius: 5px;
+            flex-direction: column;
+        }
+
+        .img4 {
+            padding-top: 25px;
+            margin: 0 auto;
+
+        }
+
+        .img4 img {
+
+            height: 20px;
+            width: 60px;
+
+
+        }
+
+        .para4 {
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .grid h3 {
+            margin: 10 auto;
+            font-size: 20px;
+        }
+
+        .grid p {
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        .mains {
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            /* background-color: aliceblue; */
+            text-align: center;
+        }
+
+        .divms {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 35px 20px;
+            margin: 25px auto;
+
+
+        }
+
+        .item5 {
+            border: 1px solid black;
+            height: 200px;
+            width: 300px;
+            background-color: rgb(139, 110, 110);
+            padding: 10px 20px;
+        }
+
+        .para51 {
+
+            
+        }
+
+        
+
+        .img5 img {
+            margin-top: auto;
+            height: 40px;
+            width: 59px;
+            border-radius: 10px;
+
+        }
+
+        .heading5 {
+            color: blue;
+
+        }
+        @media screen and (max-width:860px) {
+            .navbar {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navbar = document.querySelector('.navbar');
+
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="" class="logoimg">
+            <div class="logotxt">
+                Studysync
+            </div>
+        </div>
+
+
+        <div class="navbar">
+            <a href="#home">home</a>
+            <a href="#feature">features</a>
+            <a href="#pricing">pricing</a>
+            <a href="#blog">Blog</a>
+            <a href="#about">about</a>
+        </div>
+
+        <a href="button" class="button1">contact Us</a>
+    </div>
+
+    <div class="hero">
+        <div class="section">
+            <div class="div1">
+                <p class="p">
+                    <a href="#proud">
+                        very proud to introduce
+                    </a>
+
+                </p>
+                <h1 class="heading">Seamless learning for Bright Future</h1>
+                <p class="para">
+                    Lorem ipsum dolor fugit qui, id iusto nobis aut. Ladipisicing elit. At reprehenderit in architecto
+                    maxime ad repudiandae vel nemo saepe sunt.
+                </p>
+                <div class="button">
+                    <button class="button2"> Start now</button>
+                    <button class="button3"> Take tour</button>
+                </div>
+            </div>
+            <div class="div2">
+                <img src="C:\Users\Abdullah\Pictures\Screenshot (1).png" alt="">
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container">
+
+        <div class="card2">
+            <div class="main">
+                <h2 class="h2">
+                    Our competative Advantage
+                </h2>
+                <p class="para2">
+                    Lorem ipsum dolor sit , deserunt sunt animi temporibus, velit officia soluta in ipsam aperiam
+                    commodi beatae quas ullam?
+                </p>
+            </div>
+            <div class="grid">
+
+                <div class="item">
+
+                    <div class="img4">
+                        <img src=" C:\Users\Abdullah\Pictures\Screenshot (1).png" alt="">
+                    </div>
+                    <div class="para4">
+                        <h3>
+                            Personlized learning
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur quos omnis aut placeat.
+                            Numquam voluptas quos eius aliquid.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <div class="img4">
+                        <img src=" C:\Users\Abdullah\Pictures\Screenshot (1).png" alt="">
+                    </div>
+                    <div class="para4">
+                        <h3>
+                            Personlized learning
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur quos omnis aut placeat.
+                            Numquam voluptas quos eius aliquid.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <div class="img4">
+                        <img src=" C:\Users\Abdullah\Pictures\Screenshot (1).png" alt="">
+                    </div>
+                    <div class="para4">
+                        <h3>
+                            Personlized learning
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur quos omnis aut placeat.
+                            Numquam voluptas quos eius aliquid.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <div class="img4">
+                        <img src=" C:\Users\Abdullah\Pictures\Screenshot (1).png" alt="">
+                    </div>
+                    <div class="para4">
+                        <h3>
+                            Personlized learning
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur quos omnis aut placeat.
+                            Numquam voluptas quos eius aliquid.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <div class="img4">
+                        <img src=" C:\Users\Abdullah\Pictures\Screenshot (1).png" alt="">
+                    </div>
+                    <div class="para4">
+                        <h3>
+                            Personlized learning
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur quos omnis aut placeat.
+                            Numquam voluptas quos eius aliquid.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <div class="img4">
+                        <img src=" C:\Users\Abdullah\Pictures\Screenshot (1).png" alt="">
+                    </div>
+                    <div class="para4">
+                        <h3>
+                            Personlized learning
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur quos omnis aut placeat.
+                            Numquam voluptas quos eius aliquid.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mains">
+
+
+            <h2 class="h4">
+                what other say about us
+
+            </h2>
+            <div class="divms">
+
+                <div class="item5">
+                    <div class="para51">
+                        <p>Lorem ipsum dolor sit amet conseQuidem fugitres? Ullam corrupti molestias vitae optio
+                            quisquam obcaecati similique provident maiores, in voluptates? Ab alias possimus ut, soluta
+                            distinctio nam eum.</p>
+                    </div>
+                    <div class="img5">
+                        <img src=" C:\Users\Abdullah\Pictures\Screenshot (1).png" alt="">
+                    </div>
+                    <div class="para5">
+                        <h4 class="heading5">
+                            Abdullah AKRAM
+                        </h4>
+                        <p>
+                            8TH GRADE ENGLISH SCHOOL
+                        </p>
+                    </div>
+
+                </div>
+                <div class="item5">
+                    <div class="para51">
+                        <p>Lorem ipsum dolor sit amet consborum dolores? Ullam corrupti molestias vitae optio
+                            quisquam obcaecati similique provident maiores, in voluptates? Ab alias possimus ut, soluta
+                            distinctio nam eum.</p>
+                    </div>
+                    <div class="img5">
+                        <img src=" C:\Users\Abdullah\Pictures\Screenshot (1).png" alt="">
+                    </div>
+                    <div class="para5">
+                        <h4 class="heading5">
+                            Abdullah AKRAM
+                        </h4>
+                        <p>
+                            8TH GRADE ENGLISH SCHOOL
+                        </p>
+                    </div>
+
+                </div>
+                <div class="item5">
+                    <div class="para51">
+                        <p>Lorem ipsum dode voluptates a
+                            architecati similique provident maiores, in voluptates? Ab alias possimus ut, soluta
+                            distinctio nam eum.</p>
+                    </div>
+                    <div class="img5">
+                        <img src=" C:\Users\Abdullah\Pictures\Screenshot (1).png" alt="">
+                    </div>
+                    <div class="para5">
+                        <h4 class="heading5">
+                            Abdullah AKRAM
+                        </h4>
+                        <p>
+                            8TH GRADE ENGLISH SCHOOL
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
